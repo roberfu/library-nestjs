@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { BooksModule } from './books/books.module';
 
 @Module({
   imports: [ConfigModule.forRoot(),
@@ -13,7 +14,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     password: process.env.DB_PASSWORD,
     autoLoadEntities: true,
     synchronize: true
-  })
+  }),
+  BooksModule
   ],
   controllers: [],
   providers: [],
