@@ -8,3 +8,4 @@
 2. Install dependencies ```npm install```
 3. Rename file ```.env.example``` to ```.env``` (update secrets if you want)
 3. Up the database ```docker-compose up -d```
+6. npm run start:dev
