@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { BooksModule } from './books/books.module';
+import { CommonModule } from './common/common.module';
 
 @Module({
   imports: [ConfigModule.forRoot(),
@@ -15,7 +16,8 @@ import { BooksModule } from './books/books.module';
     autoLoadEntities: true,
     synchronize: true
   }),
-  BooksModule
+  BooksModule,
+  CommonModule
   ],
   controllers: [],
   providers: [],
