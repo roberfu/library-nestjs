@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { BooksModule } from './books/books.module';
 import { CommonModule } from './common/common.module';
+import { AuthorsModule } from './authors/authors.module';
 
 @Module({
   imports: [ConfigModule.forRoot(),
@@ -17,7 +18,8 @@ import { CommonModule } from './common/common.module';
     synchronize: true
   }),
   BooksModule,
-  CommonModule
+  CommonModule,
+  AuthorsModule
   ],
   controllers: [],
   providers: [],
